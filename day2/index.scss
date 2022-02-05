@@ -1,0 +1,134 @@
+html {
+  font-size: 62.5%;
+}
+
+body > a {
+  font-size: 1.6rem;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40rem;
+  height: 40rem;
+  margin-top: -20rem;
+  margin-left: -20rem;
+  border-radius: 0.2rem;
+  box-shadow: 0.4rem 0.8rem 1.6rem 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$shadow: 0 0.125rem 0.75rem 0 rgba(0, 0, 0, 0.3);
+
+.main {
+  background: #3faf82;
+  box-shadow: $shadow;
+}
+
+.lines {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+
+  &.animate {
+    .line1,
+    .line3 {
+      animation-name: rotate-reverse;
+    }
+
+    .line2 {
+      animation-name: hide-reverse;
+    }
+
+    &.active {
+      .line1,
+      .line3 {
+        animation-name: rotate;
+      }
+
+      .line2 {
+        animation-name: hide;
+      }
+    }
+  }
+}
+
+.line {
+  --height: 0.5rem;
+  --transform-y: 0;
+
+  position: absolute;
+  top: calc(50% - var(--height));
+  transform: translateY(var(--transform-y));
+  left: 0;
+  width: 100%;
+  height: var(--height);
+  background: #fff;
+  border-radius: 0.125rem;
+  box-shadow: $shadow;
+  animation: 0.7s ease-in-out forwards;
+}
+
+.line1 {
+  --transform-y: -1.5rem;
+  --transform-deg: 45deg;
+}
+.line3 {
+  --transform-y: 1.5rem;
+  --transform-deg: 135deg;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(var(--transform-y));
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: rotate(var(--transform-deg));
+  }
+}
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(var(--transform-deg));
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: translateY(var(--transform-y));
+  }
+}
+
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes hide-reverse {
+  0%,
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
