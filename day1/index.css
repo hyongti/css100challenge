@@ -1,0 +1,104 @@
+html {
+  font-size: 62.5%;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40rem;
+  height: 40rem;
+  margin-top: -20rem;
+  margin-left: -20rem;
+  border-radius: 0.2rem;
+  box-shadow: 0.1rem 0.2rem 1rem 0 rgba(0, 0, 0, 0.3);
+  background: #43389f;
+  background: -webkit-linear-gradient(bottom left, #43389f 0%, #4ec6ca 100%);
+  background: -moz-linear-gradient(bottom left, #43389f 0%, #4ec6ca 100%);
+  background: -o-linear-gradient(bottom left, #43389f 0%, #4ec6ca 100%);
+  background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43389F', endColorstr='#4ec6ca',GradientType=1 );
+  font-family: "Courier New", "Courier", sans-serif;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50.8%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  position: relative;
+  height: 10rem;
+  width: 20rem;
+}
+
+.one-one {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -1.6rem;
+  height: 4rem;
+  width: 2rem;
+  background: #fff;
+  border-radius: 3px;
+  transform: rotate(50deg);
+  box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.one-two {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0px;
+  height: 10rem;
+  width: 2.4rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.zero-one,
+.zero-two {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 1.7rem;
+  box-sizing: border-box;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border: 2.4rem solid #fff;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.zero-two {
+  z-index: 6;
+  left: 10rem;
+}
+
+.big {
+  position: relative;
+  z-index: 20;
+  display: block;
+  font-size: 8.2rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 0.6rem;
+}
+
+.small {
+  position: relative;
+  z-index: 20;
+  display: block;
+  font-size: 2.3rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
