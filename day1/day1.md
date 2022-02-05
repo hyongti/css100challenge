@@ -4,6 +4,8 @@
 
 ## em
 
+[플래시 이미지 출처](https://medium.com/watcha/watcha-%EA%B0%9C%EB%B0%9C-%EC%A7%80%EC%8B%9D-px-em-rem-f569c6e76e66)
+
 - 작동방식
   ![em](https://miro.medium.com/max/1400/1*cExHZLEHJR1Yl2ivVQhlIA.gif)
 
